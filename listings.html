@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games Listing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #343a40;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #495057;
+            text-align: left;
+        }
+        th {
+            background-color: #495057;
+        }
+        tr:nth-child(even) {
+            background-color: #6c757d;
+        }
+        .navigation {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .navigation a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .navigation a:hover {
+            background-color: #0056b3;
+        }
+        .update-button {
+            padding: 5px 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .update-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <a href="index.html">Home</a>
+        <a href="add_game.html">Add Game</a>
+    </div>
+
+    <h1>Games List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Genre</th>
+                <th>Release Date</th>
+                <th>Moby Score</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Text-Based Games</td>
+                <td>Adventure</td>
+                <td>2019</td>
+                <td>n/a</td>
+                <td><button class="update-button" onclick="location.href='edit_game.html?title=Text-Based Games'">Update</button></td>
+            </tr>
+            <tr>
+                <td>Massively Multiplayer Online Role-Playing Games (MMORPGs)</td>
+                <td>Role-Playing (RPG)</td>
+                <td>2020</td>
+                <td>n/a</td>
+                <td><button class="update-button" onclick="location.href='edit_game.html?title=MMORPGs'">Update</button></td>
+            </tr>
+            <tr>
+                <td>First-Person Shooters (FPS)</td>
+                <td>Action</td>
+                <td>2021</td>
+                <td>n/a</td>
+                <td><button class="update-button" onclick="location.href='edit_game.html?title=FPS'">Update</button></td>
+            </tr>
+            <tr>
+                <td>Multiplayer Online Battle Arenas (MOBAs)</td>
+                <td>Action</td>
+                <td>2021</td>
+                <td>n/a</td>
+                <td><button class="update-button" onclick="location.href='edit_game.html?title=MOBAs'">Update</button></td>
+            </tr>
+            <tr>
+                <td>Battle Royale Games</td>
+                <td>Action</td>
+                <td>2020</td>
+                <td>n/a</td>
+                <td><button class="update-button" onclick="location.href='edit_game.html?title=Battle Royale'">Update</button></td>
+            </tr>
+            <tr>
+                <td>Casual and Social Games</td>
+                <td>Simulation</td>
+                <td>2022</td>
+                <td>n/a</td>
+                <td><button class="update-button" onclick="location.href='edit_game.html?title=Casual Games'">Update</button></td>
+            </tr>
+            <tr>
+                <td>Racing Games</td>
+                <td>Racing / Driving</td>
+                <td>2021</td>
+                <td>n/a</td>
+                <td><button class="update-button" onclick="location.href='edit_game.html?title=Racing Games'">Update</button></td>
+            </tr>
+            <tr>
+                <td>Strategy Games</td>
+                <td>Strategy</td>
+                <td>2021</td>
+                <td>n/a</td>
+                <td><button class="update-button" onclick="location.href='edit_game.html?title=Strategy Games'">Update</button></td>
+            </tr>
+            <tr>
+                <td>Puzzle Games</td>
+                <td>Puzzle</td>
+                <td>2020</td>
+                <td>n/a</td>
+                <td><button class="update-button" onclick="location.href='edit_game.html?title=Puzzle Games'">Update</button></td>
+            </tr>
+            <tr>
+                <td>Sports Games</td>
+                <td>Sports</td>
+                <td>2022</td>
+                <td>n/a</td>
+                <td><button class="update-button" onclick="location.href='edit_game.html?title=Sports Games'">Update</button></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

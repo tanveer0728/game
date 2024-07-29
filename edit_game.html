@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #343a40;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #495057;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>Edit Game</h1>
+    <form action="update_game.php" method="POST">
+        <input type="hidden" name="title" id="game-title" value="">
+        <label for="genre">Genre</label>
+        <input type="text" name="genre" id="genre" required>
+        
+        <label for="release_date">Release Date</label>
+        <input type="text" name="release_date" id="release_date" required>
+        
+        <label for="moby_score">Moby Score</label>
+        <input type="text" name="moby_score" id="moby_score" required>
+        
+        <button type="submit">Update Game</button>
+    </form>
+
+    <script>
+        // Get URL parameters
+        const params = new URLSearchParams(window.location.search);
+        const title = params.get('title');
+
+        // Populate form fields based on the game title
+        document.getElementById('game-title').value = title;
+
+        // Here, you would normally retrieve the current game data from a database
+        // For now, we will use dummy data for demonstration purposes
+        if (title === "Text-Based Games") {
+            document.getElementById('genre').value = "Adventure";
+            document.getElementById('release_date').value = "2019";
+            document.getElementById('moby_score').value = "n/a";
+        } else if (title === "MMORPGs") {
+            document.getElementById('genre').value = "Role-Playing (RPG)";
+            document.getElementById('release_date').value = "2020";
+            document.getElementById('moby_score').value = "n/a";
+        }
+        // Add similar else-if blocks for other titles as necessary
+    </script>
+</body>
+</html>
